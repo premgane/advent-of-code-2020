@@ -1,10 +1,12 @@
 #!/usr/bin/python
 
+
 def read() -> list:
     lines = []
     with open('input.txt') as f:
         lines = [i for i in f.readlines()]
     return lines
+
 
 def part1(right: int, down: int) -> int:
     result = 0
@@ -20,8 +22,9 @@ def part1(right: int, down: int) -> int:
             print(line[pos])
             if line[pos] == '#':
                 result += 1
-            pos = (pos + right) % (width-1)
+            pos = (pos + right) % (width - 1)
     return result
+
 
 if __name__ == '__main__':
     print(part1(3, 1))

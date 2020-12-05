@@ -40,6 +40,7 @@ def xor_rule(chr: str, pwd: str, min: int, max: int) -> bool:
     return (((pwd[min - 1] == chr) or (pwd[max - 1] == chr)) and
                 ((pwd[min - 1] != chr) or (pwd[max - 1] != chr)))
 
+
 def part1(acceptor: Callable) -> int:
     lines = read()
     result = 0
